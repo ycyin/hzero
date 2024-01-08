@@ -776,17 +776,8 @@
                 <artifactId>elasticsearch</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
-
-    <distributionManagement>
-        <repository>
-            <id>{Repository Id}</id>
-            <name>{Repository Name}</name>
-            <url>{Repository Url}</url>
-        </repository>
-    </distributionManagement>
 
     <repositories>
         <repository>
