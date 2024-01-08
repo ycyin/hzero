@@ -146,6 +146,36 @@ HZERO前端源代码包含在本项目`hzero-front`目录下，种子数据及�
         ├─ hzero-template-oauth-main                 简化版登录模板组件
         └─ hzero-template-oauth-slide                带轮播图的登录模板组件
 ```
+## 编译
+
+开源的HZERO源码若要使用需要进行本地编译打包或上传到私人的maven仓库
+
+- 本地编译打包
+
+执行`hzero-service`目录下的`install.bat`或者`install.sh`脚本
+
+- 上传到私人仓库
+
+在`hzero-service/pom.xml`文件中添加仓库声明
+
+```
+<distributionManagement>
+    <repository>
+        <id>{Repository Id}</id>
+        <name>{Repository Name}</name>
+        <url>{Repository Url}</url>
+    </repository>
+</distributionManagement>
+```
+
+修改`hzero-service`目录下的`install.bat`或者`install.sh`脚本，添加deploy，例如：
+
+```
+mvn clean install -Dmaven.springboot.skip=true -Dmaven.test.skip=true -Dfile.encoding=UTF-8
+->
+mvn clean install deploy -Dmaven.springboot.skip=true -Dmaven.test.skip=true -Dfile.encoding=UTF-8
+```
+再执行脚本
 
 ## 安装
 
