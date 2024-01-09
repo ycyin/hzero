@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": true,
-    "indexRouter": "/hpfm/gantt",
-    "registerRegex": "(\\/(private|public|pub))?\\/hpfm\\/"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/halt/warn-template",
-    "registerRegex": "(\\/(private|public|pub))?\\/halt\\/"
-  }
-}

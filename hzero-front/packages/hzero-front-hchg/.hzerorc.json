@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hchg/service-charge",
-    "registerRegex": "(\\/(private|public|pub))?\\/hchg\\/"
-  }
-}

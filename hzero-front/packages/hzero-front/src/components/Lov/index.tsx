@@ -39,6 +39,7 @@ export interface LovProps {
   publicMode?: boolean;
   maskClosable?: boolean;
   textField?: string;
+  id?: string;
 }
 
 export default class Lov extends React.Component<LovProps, any> {
@@ -216,7 +217,7 @@ export default class Lov extends React.Component<LovProps, any> {
     if (disabled || this.loading) return; // 节流
 
     this.record = null;
-    const { code: viewCode, originTenantId: tenantId } = this.props;
+    const { code: viewCode, originTenantId: tenantId, id } = this.props;
     this.loading = true;
     this.showLoading({
       loading: true,
@@ -256,7 +257,7 @@ export default class Lov extends React.Component<LovProps, any> {
               {
                 lov,
                 title,
-                textField: textField || `__${lov.displayField}`,
+                textField: textField || `__${lov.displayField}_${id}`,
                 // width,
               },
               () => {

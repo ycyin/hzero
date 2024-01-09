@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hexl/calc/sheet",
-    "registerRegex": "(\\/(private|public|pub))?\\/hexl\\/"
-  }
-}

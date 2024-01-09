@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hpay/pay-config",
-    "registerRegex": "(\\/(private|public|pub))?\\/hpay\\/"
-  }
-}

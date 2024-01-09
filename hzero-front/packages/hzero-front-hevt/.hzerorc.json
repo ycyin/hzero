@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hevt/event",
-    "registerRegex": "(\\/(private|public|pub))?\\/hevt\\/"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hres/rules",
-    "registerRegex": "(\\/(private|public|pub))?\\/hres\\/"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/horc/orchestration-definition",
-    "registerRegex": "(\\/(private|public|pub))?\\/horc\\/"
-  }
-}

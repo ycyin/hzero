@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hfnt/preposed-machine",
-    "registerRegex": "(\\/(private|public|pub))?\\/hfnt\\/"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hocr/common-ocr",
-    "registerRegex": "(\\/(private|public|pub))?\\/hocr\\/"
-  }
-}

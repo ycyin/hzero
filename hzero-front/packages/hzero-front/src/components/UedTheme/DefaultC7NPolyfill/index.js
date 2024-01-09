@@ -219,14 +219,14 @@ const sectionOne = () => {
       content: ':';
     }
 
-    .c7n-pro-field-required.c7n-pro-field-label:before {
+    /* .c7n-pro-field-required.c7n-pro-field-label:before {
       display: inline-block;
       margin-right: 4px;
       content: '*';
       line-height: 1;
       font-size: 12px;
       color: #f5222d;
-    }
+    } */
 
     .c7n-pro-select-clear-button,
     .c7n-pro-calendar-picker-clear-button {

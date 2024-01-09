@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hdsc/permission-demo",
-    "registerRegex": "(\\/(private|public|pub))?\\/hdsc\\/"
-  }
-}

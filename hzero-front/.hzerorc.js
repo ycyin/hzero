@@ -4,28 +4,7 @@ module.exports = {
       "name": "hzero-front-hadm"
     },
     {
-      "name": "hzero-front-hagd"
-    },
-    {
-      "name": "hzero-front-halt"
-    },
-    {
-      "name": "hzero-front-hchg"
-    },
-    {
-      "name": "hzero-front-hdtt"
-    },
-    {
-      "name": "hzero-front-hebk"
-    },
-    {
-      "name": "hzero-front-hexl"
-    },
-    {
       "name": "hzero-front-hfile"
-    },
-    {
-      "name": "hzero-front-hgat"
     },
     {
       "name": "hzero-front-hiam"
@@ -34,65 +13,14 @@ module.exports = {
       "name": "hzero-front-himp"
     },
     {
-      "name": "hzero-front-hims"
-    },
-    {
-      "name": "hzero-front-hiot"
-    },
-    {
-      "name": "hzero-front-hitf"
-    },
-    {
-      "name": "hzero-front-hivc"
-    },
-    {
-      "name": "hzero-front-hmnt"
-    },
-    {
       "name": "hzero-front-hmsg"
-    },
-    {
-      "name": "hzero-front-hnlp"
-    },
-    {
-      "name": "hzero-front-hocr"
-    },
-    {
-      "name": "hzero-front-hpay"
     },
     {
       "name": "hzero-front-hpfm"
     },
     {
-      "name": "hzero-front-hres"
-    },
-    {
       "name": "hzero-front-hrpt"
     },
-    {
-      "name": "hzero-front-hsdr"
-    },
-    {
-      "name": "hzero-front-hsrh"
-    },
-    {
-      "name": "hzero-front-hwfp"
-    },
-    {
-      "name": "hzero-front-hevt"
-    },
-    {
-      "name": "hzero-front-hdsc"
-    },
-    {
-      "name": "hzero-front-hiam-tr"
-    },
-    {
-      "name": "hzero-front-horc"
-    },
-    {
-      "name": "hzero-front-hfnt"
-    }
   ],
   "hzeroBoot": "hzero-boot/lib/pathInfo",
   "common": ['hzero-front'],

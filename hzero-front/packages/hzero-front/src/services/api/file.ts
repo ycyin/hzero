@@ -8,8 +8,10 @@
 import axios from 'axios';
 
 import request from 'utils/request';
+import isNil from 'lodash/isNil';
 import { getIeVersion } from 'utils/browser';
 import { getEnvConfig } from 'utils/iocUtils';
+import intl from 'utils/intl';
 
 import {
   filterNullValueObject,
@@ -20,6 +22,7 @@ import {
   isTenantRoleLevel,
 } from 'utils/utils';
 import { getMenuId } from 'utils/menuTab';
+import notification from 'utils/notification';
 
 const { API_HOST, HZERO_FILE } = getEnvConfig();
 
@@ -257,6 +260,20 @@ export interface DownloadFileParams {
 export async function downloadFile(params: DownloadFileParams) {
   const { requestUrl: url, queryParams, method } = params || {};
   let newUrl = !url.startsWith('/api') && !url.startsWith('http') ? `${API_HOST}${url}` : url;
+
+  if (queryParams && Array.isArray(queryParams)) {
+    const { value: queryUrl } = queryParams.find(({ name }) => name === 'url') || {};
+    const hasBucketName = queryParams.findIndex(({ name }) => name === 'bucketName') > -1;
+
+    if (hasBucketName && (!queryUrl || ['undefined', 'null'].includes(queryUrl))) {
+      notification.error({
+        description: intl
+          .get('hzero.common.file.url.missing.downloadFailed')
+          .d('文件 url 为空，下载失败'),
+      });
+    }
+  }
+
   const iframeName = `${url}${Math.random()}`;
 
   // 构建iframe
@@ -453,6 +470,9 @@ export function downloadFileByAxios(params: DownloadFileParams, filename?: strin
         err = JSON.parse(enc.decode(new Uint8Array(resp.data)));
       } catch (error) {
         console.error(e);
+      }
+      if (!isNil(err)) {
+        notification.error(err);
       }
       throw err;
     }

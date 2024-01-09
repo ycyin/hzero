@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hebk/proxy",
-    "registerRegex": "(\\/(private|public|pub))?\\/hebk\\/"
-  }
-}

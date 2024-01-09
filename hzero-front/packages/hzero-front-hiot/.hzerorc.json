@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hiot/dptm",
-    "registerRegex": "(\\/(private|public|pub))?\\/hiot\\/"
-  }
-}

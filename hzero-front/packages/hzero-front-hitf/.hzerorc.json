@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hitf/application",
-    "registerRegex": "(\\/(private|public|pub))?\\/hitf\\/"
-  }
-}

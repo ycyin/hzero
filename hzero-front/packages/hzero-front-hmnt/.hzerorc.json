@@ -1,7 +1,0 @@
-{
-  "package": {
-    "initLoad": false,
-    "indexRouter": "/hmnt/audit-query",
-    "registerRegex": "(\\/(private|public|pub))?\\/hmnt\\/"
-  }
-}
