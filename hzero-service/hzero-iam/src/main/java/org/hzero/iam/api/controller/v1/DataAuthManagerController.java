@@ -174,7 +174,7 @@ public class DataAuthManagerController extends BaseController {
     }
 
     @ApiOperation(value = "权限维护 - 权限维度，权限分配角色（新建or更新）")
-    @Permission(permissionLogin = true)
+    @Permission(permissionWithin = true)
     @PostMapping("/role/save-all-role")
     public ResponseEntity<List<RoleAuthorityDTO>> batchCreateOrUpdateAllRoleAuthority(@RequestBody List<RoleAuthorityDTO> roleAuthorityDtos) {
         roleAuthorityDtos.forEach(item -> {

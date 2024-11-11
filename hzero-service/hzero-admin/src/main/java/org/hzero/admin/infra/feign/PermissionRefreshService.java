@@ -3,6 +3,8 @@ package org.hzero.admin.infra.feign;
 import org.hzero.common.HZeroService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -37,5 +39,6 @@ public interface PermissionRefreshService {
     ResponseEntity<String> innerRefresh(@RequestParam("serviceName") String serviceName,
                                         @RequestParam(value = "metaVersion", required = false) String metaVersion);
 
-
+    @GetMapping("/hzero/v1/{organizationId}/roles/{roleId}")
+    ResponseEntity<String> getRole(@PathVariable("organizationId") Long tenantId, @RequestParam("roleId") Long roleId);
 }

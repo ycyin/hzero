@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
 import io.choerodon.core.domain.Page;
+import io.choerodon.core.iam.ResourceLevel;
 import io.choerodon.mybatis.pagehelper.annotation.SortDefault;
 import io.choerodon.mybatis.pagehelper.domain.PageRequest;
 import io.choerodon.mybatis.pagehelper.domain.Sort;
@@ -39,7 +40,7 @@ public class RoleAuthoritySiteController extends BaseController {
     private RoleAuthorityService roleAuthorityService;
 
     @ApiOperation(value = "角色数据权限定义列表")
-    @Permission(permissionLogin = true)
+    @Permission(level = ResourceLevel.ORGANIZATION)
     @CustomPageRequest
     @GetMapping("/{organizationId}")
     public ResponseEntity<Page<RoleAuthorityDTO>> list(
@@ -53,7 +54,7 @@ public class RoleAuthoritySiteController extends BaseController {
     }
 
     @ApiOperation(value = "批量新增或保存角色数据权限定义明细")
-    @Permission(permissionLogin = true)
+    @Permission(level = ResourceLevel.ORGANIZATION)
     @PostMapping
     public ResponseEntity<List<RoleAuthorityDTO>> batchCreateOrUpdateRoleAuthority(@Encrypt @PathVariable Long roleId,@RequestBody List<RoleAuthorityDTO> roleAuthorityDtos) {
         roleAuthorityService.batchCreateOrUpdateRoleAuthority(roleId,roleAuthorityDtos);
@@ -61,7 +62,7 @@ public class RoleAuthoritySiteController extends BaseController {
     }
 
     @ApiOperation(value = "删除角色数据权限定义")
-    @Permission(permissionLogin = true)
+    @Permission(level = ResourceLevel.ORGANIZATION)
     @DeleteMapping
     public ResponseEntity<Void> deleteRoleAuthority(@PathVariable("roleId") @Encrypt Long roleId, @RequestParam @Encrypt Long roleAuthId) {
         roleAuthorityService.deleteRoleAuthority(roleAuthId);

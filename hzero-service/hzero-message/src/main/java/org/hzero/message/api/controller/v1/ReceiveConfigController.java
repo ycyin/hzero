@@ -43,14 +43,14 @@ public class ReceiveConfigController extends BaseController {
     }
 
     @ApiOperation(value = "接收配置列表")
-    @Permission(permissionLogin = true, level = ResourceLevel.ORGANIZATION)
+    @Permission(level = ResourceLevel.ORGANIZATION)
     @GetMapping
     public ResponseEntity<List<ReceiveConfigDTO>> listConfig(@PathVariable Long organizationId) {
         return Results.success(receiveConfigService.listConfig(organizationId));
     }
 
     @ApiOperation(value = "接收配置明细")
-    @Permission(permissionLogin = true, level = ResourceLevel.ORGANIZATION)
+    @Permission(level = ResourceLevel.ORGANIZATION)
     @GetMapping("/{receiveId}")
     public ResponseEntity<ReceiveConfig> detailConfig(@Encrypt @PathVariable Long organizationId, @PathVariable Long receiveId) {
         ReceiveConfig receiveConfig = receiveConfigRepository.selectOne(new ReceiveConfig()
@@ -60,7 +60,7 @@ public class ReceiveConfigController extends BaseController {
     }
 
     @ApiOperation(value = "创建及修改接收配置")
-    @Permission(permissionLogin = true, level = ResourceLevel.ORGANIZATION)
+    @Permission(level = ResourceLevel.ORGANIZATION)
     @PostMapping
     public ResponseEntity<List<ReceiveConfig>> createConfig(@PathVariable Long organizationId, @Encrypt @RequestBody List<ReceiveConfig> receiveConfigList) {
         for (ReceiveConfig config : receiveConfigList) {
