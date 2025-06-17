@@ -116,7 +116,7 @@ hzero:
     # 是否检查redirect_uri的一致性
     check-redirect-uri: ${HZERO_OAUTH_CHECK_REDIRECT_URI:true}
     # oauth 服务基础地址
-    base-url: ${HZERO_OAUTH_BASE_URL:http://dev.hzero.org:8080/oauth}
+    base-url: ${HZERO_OAUTH_BASE_URL:http://dev.hzero.com.cn:8080/oauth}
     login:
       # 允许使用的登录名，默认有 用户名、邮箱、手机号
       support-fields: ${HZERO_OAUTH_LOGIN_SUPPORT_FIELDS:username,email,phone}
@@ -125,7 +125,7 @@ hzero:
       # 跳转到默认登录成功地址时使用的客户端ID
       default-client-id: ${HZERO_OAUTH_LOGIN_DEFAULT_CLIENT_ID:hzero-front-dev}
       # 默认登录成功跳转地址
-      success-url: ${HZERO_OAUTH_LOGIN_SUCCESS_URL:http://dev.hzero.org/workplace}
+      success-url: ${HZERO_OAUTH_LOGIN_SUCCESS_URL:http://dev.hzero.com.cn/workplace}
       # 密码防重放缓存过期时间，单位(天)
       pass-replay-expire: ${HZERO_OAUTH_LOGIN_PASS_REPLAY_EXPIRE:30}
       # 登录密码是否加密传输

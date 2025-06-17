@@ -91,7 +91,7 @@ hzero:
     # 匹配的资源才会解析JwtToken便于得到UserDetails
     pattern: ${HZERO_RESOURCE_PATTERN:/v1/*,/hzero/*,/hrpt/v1/*,/hrpt/hzero/*}
   report:
-    qrCodeUrl: ${HZERO_QR_CODE_URL:http://dev.hzero.org:8080/hrpt/v1/codes?text=}
+    qrCodeUrl: ${HZERO_QR_CODE_URL:http://dev.hzero.com.cn:8080/hrpt/v1/codes?text=}
 #    fontPaths:
 #      - simsun|/root/simsun.ttc
 #      - kaiti|/root/simkai.ttf

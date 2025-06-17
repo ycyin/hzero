@@ -116,9 +116,9 @@ hzero:
       file-key-expire: ${ONLY_OFFICE_FILE_KEY_EXPIRE:30}
       token: ${DOC_SERVER_TOKEN:epFl7vl24D}
       doc-server-url: ${DOC_SERVER_URL:http://document.hzero.org:7000/document}
-      call-back-url: ${DOC_SERVER_CALL_BACK:http://dev.hzero.org:8080/hfle/v1/only-office/save}
+      call-back-url: ${DOC_SERVER_CALL_BACK:http://dev.hzero.com.cn:8080/hfle/v1/only-office/save}
       converter-url: ${DOC_SERVER_CONVERTER_URL:http://document.hzero.org:8000/converter}
-    gateway-path: ${FILE_GATEWAY_URL:http://dev.hzero.org:8080/hfle}
+    gateway-path: ${FILE_GATEWAY_URL:http://dev.hzero.com.cn:8080/hfle}
   data:
     permission:
       db-owner: ${HZERO_DB_OWNER:}
